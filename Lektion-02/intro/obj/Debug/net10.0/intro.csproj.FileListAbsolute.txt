@@ -1,0 +1,14 @@
+/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/bin/Debug/net10.0/intro
+/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/bin/Debug/net10.0/intro.deps.json
+/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/bin/Debug/net10.0/intro.runtimeconfig.json
+/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/bin/Debug/net10.0/intro.dll
+/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/bin/Debug/net10.0/intro.pdb
+/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/obj/Debug/net10.0/intro.GeneratedMSBuildEditorConfig.editorconfig
+/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/obj/Debug/net10.0/intro.AssemblyInfoInputs.cache
+/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/obj/Debug/net10.0/intro.AssemblyInfo.cs
+/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/obj/Debug/net10.0/intro.csproj.CoreCompileInputs.cache
+/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/obj/Debug/net10.0/intro.dll
+/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/obj/Debug/net10.0/refint/intro.dll
+/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/obj/Debug/net10.0/intro.pdb
+/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/obj/Debug/net10.0/intro.genruntimeconfig.cache
+/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/obj/Debug/net10.0/ref/intro.dll
