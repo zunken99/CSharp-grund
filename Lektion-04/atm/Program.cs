@@ -5,7 +5,7 @@ class Program
 
     // Deklarera en variabel för aktuellt saldo...
     static int balance = 0;
-    // Deklarera en variable för transaktioner...
+    // Deklarera en variabel för transaktioner...
     static List<string> transactions = new List<string>();
     static void Main()
     {
@@ -89,7 +89,7 @@ class Program
         if (int.TryParse(amount, out int result))
         {
             balance += result;
-            transactions.Add($"Transaktionsdatum: {DateTime.Now} - Transakationstyp: insättning - Transaktionvärde: {result}");
+            transactions.Add($"Transaktionsdatum: {DateTime.Now} - Transaktionstyp: insättning - Transaktionvärde: {result}");
         }
         else
         {
@@ -102,7 +102,7 @@ class Program
         if (int.TryParse(amount, out int result))
         {
             balance -= result;
-            transactions.Add($"Transaktionsdatum: {DateTime.Now} - Transakationstyp: uttag - Transaktionvärde: {result}");
+            transactions.Add($"Transaktionsdatum: {DateTime.Now} - Transaktionstyp: uttag - Transaktionvärde: {result}");
         }
         else
         {
