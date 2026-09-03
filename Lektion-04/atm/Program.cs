@@ -20,53 +20,65 @@ class Program
         Console.WriteLine("För att visa transaktioner tryck på tangenten 't'");
         Console.WriteLine("------------------------------------------------------------------");
 
-        while (true)
+        try
         {
-            var key = Console.ReadLine();
-
-            if (string.IsNullOrWhiteSpace(key) || key == "x")
+            while (true)
             {
-                Environment.Exit(0);
-            }
-            else if (key == "d")
-            {
-                Console.WriteLine("Hur mycket vill du sätta in?");
-                var amount = Console.ReadLine();
+                var key = Console.ReadLine();
 
-                if (string.IsNullOrWhiteSpace(amount))
+                if (string.IsNullOrWhiteSpace(key) || key == "x")
                 {
-                    Console.WriteLine("Du måste ange ett heltals belopp som du vill sätta in!");
                     Environment.Exit(0);
                 }
-
-                Deposit(amount);
-            }
-            else if (key == "w")
-            {
-                Console.WriteLine("Hur mycket vill du ta ut?");
-                var amount = Console.ReadLine();
-
-                if (string.IsNullOrWhiteSpace(amount))
+                else if (key == "d")
                 {
-                    Console.WriteLine("Du måste ange ett heltals belopp som du vill ta ut!");
+                    Console.WriteLine("Hur mycket vill du sätta in?");
+                    var amount = Console.ReadLine();
+
+                    if (string.IsNullOrWhiteSpace(amount))
+                    {
+                        throw new Exception("Du måste ange ett heltals belopp som du vill sätta in!");
+                    }
+
+                    Deposit(amount);
+                }
+                else if (key == "w")
+                {
+                    Console.WriteLine("Hur mycket vill du ta ut?");
+                    var amount = Console.ReadLine();
+
+                    if (string.IsNullOrWhiteSpace(amount))
+                    {
+                        throw new Exception("Du måste ange ett heltals belopp som du vill ta ut!");
+                    }
+
+                    WithDraw(amount);
+                }
+                else if (key == "b")
+                {
+                    DisplayBalance();
+                }
+                else if (key == "t")
+                {
+                    DisplayTransactions();
+                }
+                else
+                {
+                    Console.WriteLine("Jag förstår inte ditt val");
                     Environment.Exit(0);
                 }
-
-                WithDraw(amount);
             }
-            else if (key == "b")
-            {
-                DisplayBalance();
-            }
-            else if (key == "t")
-            {
-                DisplayTransactions();
-            }
-            else
-            {
-                Console.WriteLine("Jag förstår inte ditt val");
-                Environment.Exit(0);
-            }
+        }
+        catch (Exception ex)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(ex.Message);
+            Console.ResetColor();
+            Environment.Exit(0);
+        }
+        finally
+        {
+            Console.WriteLine("Klar!");
         }
     }
 
@@ -86,28 +98,34 @@ class Program
 
     static void Deposit(string amount)
     {
-        if (int.TryParse(amount, out int result))
+        if (!int.TryParse(amount, out int result))
         {
-            balance += result;
-            transactions.Add($"Transaktionsdatum: {DateTime.Now} - Transaktionstyp: insättning - Transaktionvärde: {result}");
+            throw new Exception("Kan inte tolka din inmatning som heltal");
         }
-        else
-        {
-            Console.WriteLine("Tyvärr förstår inte jag vad du menar");
-            Environment.Exit(0);
-        }
+
+        balance += result;
+        transactions.Add($"Transaktionsdatum: {DateTime.Now} - Transaktionstyp: insättning - Transaktionvärde: {result}");
+
+        // if (int.TryParse(amount, out int result))
+        // {
+        //     balance += result;
+        //     transactions.Add($"Transaktionsdatum: {DateTime.Now} - Transaktionstyp: insättning - Transaktionvärde: {result}");
+        //     return;
+        // }
+
+        // throw new Exception("Kan inte tolka din inmatning som heltal");
     }
     static void WithDraw(string amount)
     {
         if (int.TryParse(amount, out int result))
         {
+            // Kontrollera att saldot är tillräckligt...
             balance -= result;
             transactions.Add($"Transaktionsdatum: {DateTime.Now} - Transaktionstyp: uttag - Transaktionvärde: {result}");
         }
         else
         {
-            Console.WriteLine("Tyvärr förstår inte jag vad du menar");
-            Environment.Exit(0);
+            throw new Exception("Tyvärr förstår inte jag vad du menar");
         }
     }
 }
