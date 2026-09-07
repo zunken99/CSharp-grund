@@ -1,7 +1,5 @@
 namespace atm;
 
-//github ssh key test haha lol
-
 public class User(string userId, int pin, int balance)
 {
     
