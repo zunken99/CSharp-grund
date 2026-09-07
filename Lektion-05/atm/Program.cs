@@ -23,13 +23,13 @@ public class Transaction
 
 class Program
 {
-    static User user = new User
+    static User user = new()
     {
         UserId = "user1",
         Balance = 0
     };
 
-    static List<Transaction> transactions = new();
+    static List<Transaction> transactions = [];
 
     static void Main()
     {
