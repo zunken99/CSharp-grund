@@ -9,7 +9,7 @@ public class User(string userId, int pin, int balance)
     public int Balance { get; set; } = balance;
 }
 
-public class Transaction
+public record Transaction
 {
     public string Type { get; }
     public DateTime Date { get; }
