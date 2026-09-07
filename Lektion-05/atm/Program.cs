@@ -1,10 +1,12 @@
 namespace atm;
 
-public class User
+public class User(string userId, int pin, int balance)
 {
-    public string UserId { get; set; } = "";
-    public int Pin { get; set; }
-    public int Balance { get; set; }
+    
+
+    public string UserId { get; set; } = userId;
+    public int Pin { get; set; } = pin;
+    public int Balance { get; set; } = balance;
 }
 
 public class Transaction
@@ -23,16 +25,23 @@ public class Transaction
 
 class Program
 {
-    static User user = new()
-    {
-        UserId = "user1",
-        Balance = 0
-    };
+    static User user = new User("isak", 1234, 0);
+    
 
     static List<Transaction> transactions = [];
 
     static void Main()
     {
+        if (!AuthenticateUser())
+        {
+            Console.WriteLine("Autentisering misslyckades. Programmet avslutas.");
+            Environment.Exit(1);
+        }
+
+        else
+        {
+            Console.WriteLine("Autentisering lyckades. Välkommen!");
+        }
         Console.WriteLine("------------------------------------------------------------------");
         Console.WriteLine("Välkommen Westcoast Bank");
         Console.WriteLine("Meny alternativ");
@@ -85,6 +94,31 @@ class Program
                 Console.WriteLine(ex.Message);
                 Console.ResetColor();
             }
+        }
+    }
+
+    static bool AuthenticateUser()
+    {
+        Console.Write("Ange användarnamn: ");
+        string? userId = Console.ReadLine();
+
+        Console.Write("Ange PIN-kod: ");
+        string? pinInput = Console.ReadLine();
+
+        if (!int.TryParse(pinInput, out int pin))
+        {
+            Console.WriteLine("Ogiltig PIN-kod.");
+            return false;
+        }
+
+        if (userId == user.UserId && pin == user.Pin)
+        {
+            return true;
+        }
+        else
+        {
+            Console.WriteLine("Felaktigt användarnamn eller PIN-kod.");
+            return false;
         }
     }
 
