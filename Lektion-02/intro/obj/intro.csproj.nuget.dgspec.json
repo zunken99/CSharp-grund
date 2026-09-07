@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/intro.csproj": {}
+    "/Users/isaksvensson/vs code/michaelFork/Lektion-02/intro/intro.csproj": {}
   },
   "projects": {
-    "/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/intro.csproj": {
+    "/Users/isaksvensson/vs code/michaelFork/Lektion-02/intro/intro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/intro.csproj",
+        "projectUniqueName": "/Users/isaksvensson/vs code/michaelFork/Lektion-02/intro/intro.csproj",
         "projectName": "intro",
-        "projectPath": "/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/intro.csproj",
-        "packagesPath": "/Users/michaelsdev/.nuget/packages/",
-        "outputPath": "/Users/michaelsdev/Documents/Lektioner/Lektion-02/intro/obj/",
+        "projectPath": "/Users/isaksvensson/vs code/michaelFork/Lektion-02/intro/intro.csproj",
+        "packagesPath": "/Users/isaksvensson/.nuget/packages/",
+        "outputPath": "/Users/isaksvensson/vs code/michaelFork/Lektion-02/intro/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/michaelsdev/.nuget/NuGet/NuGet.Config"
+          "/Users/isaksvensson/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
