@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/isaksvensson/vs code/michaelFork/Lektion-02/intro/intro.csproj": {}
+    "C:\\Users\\isaks\\michaelFork\\Lektion-02\\intro\\intro.csproj": {}
   },
   "projects": {
-    "/Users/isaksvensson/vs code/michaelFork/Lektion-02/intro/intro.csproj": {
+    "C:\\Users\\isaks\\michaelFork\\Lektion-02\\intro\\intro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/isaksvensson/vs code/michaelFork/Lektion-02/intro/intro.csproj",
+        "projectUniqueName": "C:\\Users\\isaks\\michaelFork\\Lektion-02\\intro\\intro.csproj",
         "projectName": "intro",
-        "projectPath": "/Users/isaksvensson/vs code/michaelFork/Lektion-02/intro/intro.csproj",
-        "packagesPath": "/Users/isaksvensson/.nuget/packages/",
-        "outputPath": "/Users/isaksvensson/vs code/michaelFork/Lektion-02/intro/obj/",
+        "projectPath": "C:\\Users\\isaks\\michaelFork\\Lektion-02\\intro\\intro.csproj",
+        "packagesPath": "C:\\Users\\isaks\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\isaks\\michaelFork\\Lektion-02\\intro\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/isaksvensson/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\isaks\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.400/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
