@@ -5,7 +5,7 @@ namespace WestcoastBank;
 
 class Program
 {
-    static User user = new User("isak", 1234, 0);
+    static User user = new("isak", 1234, 0);
     
 
     static List<Transaction> transactions = [];
